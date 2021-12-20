@@ -1,0 +1,25 @@
+.jep-reader-theme-light {
+  --reader-text-color-label: #222224;
+  --reader-text-color-primary: #ec255a;
+  --reader-text-color-secundary: blue;
+  --reader-text-color-tertiary: blue;
+
+  --reader-fill-primary: #fff;
+  --reader-fill-secundary: #ddd;
+  --reader-fill-tertiary: var(--lt-color-gray-100);
+
+  --reader-other-tertiary: #ccc;
+}
+
+.jep-reader-theme-dark {
+  --reader-text-color-label: #fff;
+  --reader-text-color-primary: #ec255a;
+  --reader-text-color-secundary: tomato;
+  --reader-text-color-tertiary: tomato;
+
+  --reader-fill-primary: #222224;
+  --reader-fill-secundary: #3a3a3d;
+  --reader-fill-tertiary: var(--lt-color-gray-900);
+
+  --reader-other-tertiary: #f1ede7;
+}
