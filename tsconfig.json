@@ -13,7 +13,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@jpe-reader/components/*": ["components/*"],
+      "@jpe-reader/config/*": ["config/*"],
+      "@jpe-reader/contexts/*": ["contexts/*"],
+      "@jpe-reader/hooks/*": ["hooks/*"],
+      "@jpe-reader/styles/*": ["styles/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
