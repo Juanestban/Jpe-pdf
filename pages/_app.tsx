@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import ThemeProvider from '@jpe-reader/contexts/ThemeContext';
 import Spinner from '@jpe-reader/components/Molecules/Spinner/Spinner';
 import Navbar from '@jpe-reader/components/Molecules/Navbar';
+import { OverlayProvider } from '@jpe-reader/contexts/OverlayContext';
+import Container from '@jpe-reader/components/Molecules/Container';
 
 import 'normalize.css';
 import '../styles/globals.css';
@@ -26,8 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider>
-      <Navbar />
-      <Component {...pageProps} />
+      <OverlayProvider>
+        <Navbar />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+      </OverlayProvider>
     </ThemeProvider>
   );
 }

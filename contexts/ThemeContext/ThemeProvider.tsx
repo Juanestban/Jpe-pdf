@@ -42,7 +42,13 @@ function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(themeChanged);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    if (body) {
+      body.style.backgroundColor = theme === 'dark' ? '#222224' : '#fff';
+    }
+  });
 
   return (
     <ThemeContext.Provider value={{ theme, handleTheme }}>
