@@ -1,6 +1,7 @@
 import { FC, forwardRef, HTMLAttributes } from 'react';
-import * as IconsImports from 'react-icons/fa';
+import * as IconsImports from 'react-icons/bi';
 import classnames from 'classnames';
+import { Icon, SizeIcon } from '../Icon';
 import css from './styles';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
@@ -8,7 +9,7 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   rol?: 'normal' | 'primary' | 'secundary' | 'tertiary';
   ifFullWidth?: boolean;
   icon?: keyof typeof IconsImports;
-  size?: number | string;
+  size?: SizeIcon;
   colorIcon?: string;
 }
 
@@ -17,16 +18,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   ref
 ) {
   const buttonClasses = classnames('button', className);
-  const IconsNames = { ...IconsImports };
-  const Icon = IconsNames[icon!];
 
   return (
     <>
       <button ref={ref} className={buttonClasses} {...props}>
         {icon && (
           <Icon
-            size={size}
+            icon={icon}
             color={colorIcon}
+            sizeIcon={size}
             style={{ marginRight: children ? 5 : 0 }}
           />
         )}
