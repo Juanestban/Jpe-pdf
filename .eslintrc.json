@@ -22,5 +22,14 @@
     "plugin:react/recommended",
     "standard",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "react/prop-types": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "no-unused-vars": 0,
+    "@typescript-eslint/ban-types": 0
+  }
 }

@@ -9,6 +9,9 @@
   --reader-fill-tertiary: var(--lt-color-gray-100);
 
   --reader-other-tertiary: #ccc;
+
+  --backdrop-color: rgba(0, 0, 0, 0.3);
+  --backdrop-bg-color: #fff;
 }
 
 .jep-reader-theme-dark {
@@ -22,4 +25,7 @@
   --reader-fill-tertiary: var(--lt-color-gray-900);
 
   --reader-other-tertiary: #f1ede7;
+
+  --backdrop-color: rgba(1, 1, 1, 0.3);
+  --backdrop-bg-color: #222224;
 }
