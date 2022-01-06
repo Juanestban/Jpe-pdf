@@ -6,6 +6,7 @@ import Spinner from '@jpe-reader/components/Molecules/Spinner/Spinner';
 import Navbar from '@jpe-reader/components/Molecules/Navbar';
 import { OverlayProvider } from '@jpe-reader/contexts/OverlayContext';
 import Container from '@jpe-reader/components/Molecules/Container';
+import AuthProvider from '@jpe-reader/contexts/AuthContext';
 
 import 'normalize.css';
 import '../styles/globals.css';
@@ -58,9 +59,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="theme-color" content="#317EFB" />
         </Head>
         <Navbar />
-        <Container>
-          <Component {...pageProps} />
-        </Container>
+        <AuthProvider>
+          <Container>
+            <Component {...pageProps} />
+          </Container>
+        </AuthProvider>
       </OverlayProvider>
     </ThemeProvider>
   );
