@@ -32,7 +32,7 @@ export const Portal: FC<PortalProps & ContainerPortalProps> = ({
         <Backdrop>
           <ContainerPortal size={size}>
             <header className="header-portal">
-              <Button icon="BiXCircle" onClick={onClose} />
+              <Button icon="IoCloseCircleOutline" onClick={onClose} />
             </header>
             {children}
             <footer className="footer-portal">{footer}</footer>

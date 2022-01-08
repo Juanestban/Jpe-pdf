@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <Button onClick={handleToggle}>button</Button>
       <Portal isVisible={toggle} onClose={handleToggle}>
-        holaaa
+        <h3>holaaa</h3>
       </Portal>
     </div>
   );

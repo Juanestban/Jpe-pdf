@@ -15,9 +15,7 @@ function MyApp(AppProps: AppProps) {
   const [isRender, setIsRender] = useState<boolean>(false);
 
   useEffect(() => {
-    if (window) {
-      setIsRender(true);
-    }
+    if (window) setIsRender(true);
   }, []);
 
   if (!isRender)

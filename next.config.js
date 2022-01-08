@@ -7,7 +7,7 @@ const isProduction = process.env.NODE_ENV !== 'production';
 module.exports = withPWA({
   reactStrictMode: true,
   pwa: {
-    dest: '.next/public',
+    dest: 'public',
     disable: isProduction,
     runtimeCaching,
   },

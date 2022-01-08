@@ -7,6 +7,13 @@ const styles = css`
     margin: 0 auto;
     margin-top: 5%;
   }
+
+  .no-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 `;
 
 export default styles;
