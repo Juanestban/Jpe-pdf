@@ -32,6 +32,56 @@ ul {
   margin: 0;
 }
 
+/* font-size */
+
+.extra-large {
+  font-size: var(--font-size-extra-large);
+}
+
+.semi-large {
+  font-size: var(--font-size-semi-large);
+}
+
+.large {
+  font-size: var(--font-size-large);
+}
+
+.semi-normal {
+  font-size: var(--font-size-semi-normal);
+}
+
+.normal {
+  font-size: var(--font-size-normal);
+}
+
+.semi-small {
+  font-size: var(--font-size-semi-small);
+}
+
+.small {
+  font-size: var(--font-size-small);
+}
+
+/* colors */
+
+.color-primary {
+  color: var(--reader-text-color-primary);
+}
+
+.color-secondary {
+  color: var(--reader-text-color-secondary);
+}
+
+.color-tertiary {
+  color: var(--reader-text-color-tertiary);
+}
+
+.color-label {
+  color: var(--reader-text-color-label);
+}
+
+/* simple classes */
+
 .principal-theme {
   min-height: 100vh;
   background-color: var(--reader-fill-tertiary);

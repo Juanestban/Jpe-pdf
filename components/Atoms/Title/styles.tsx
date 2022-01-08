@@ -1,10 +1,16 @@
 import css from 'styled-jsx/css';
 
 const styles = css`
-  p {
+  h1 {
   }
 
-  span {
+  h2 {
+  }
+
+  h3 {
+  }
+
+  h4 {
   }
 `;
 
