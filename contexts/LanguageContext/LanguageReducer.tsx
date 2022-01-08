@@ -7,9 +7,9 @@ export function languageReducer(
 ): LangState {
   switch (action.type) {
     case LanguagesTypes.engish:
-      return 'Engish';
+      return 'English';
     case LanguagesTypes.spanish:
-      return 'Spanish';
+      return 'Español';
     default:
       return lang;
   }

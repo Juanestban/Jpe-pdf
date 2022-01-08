@@ -1,12 +1,14 @@
-import { useTheme } from '@jpe-reader/hooks/useTheme';
 import Link from '@jpe-reader/components/Atoms/Link';
 import Button from '../../Atoms/Button';
-import styles from './styles.module.css';
-import { LanguageSelection } from '../LanguageSelection';
 import Title from '@jpe-reader/components/Atoms/Title';
+import { LanguageSelection } from '../LanguageSelection';
+import { useTheme } from '@jpe-reader/hooks/useTheme';
+import { useDictionary } from '@jpe-reader/hooks/useLanguage';
+import styles from './styles.module.css';
 
 export default function Navbar() {
   const { theme, handleTheme } = useTheme();
+  const { navbar } = useDictionary();
 
   return (
     <header className={styles.header}>
@@ -16,7 +18,7 @@ export default function Navbar() {
       <nav className={styles.nav}>
         <ul className={styles.ul}>
           <li>
-            <Link href="/">Inicio</Link>
+            <Link href="/">{navbar.home}</Link>
           </li>
           <li>
             <Button

@@ -1,7 +1,7 @@
 import css from 'styled-jsx/css';
 
 const styles = css`
-  button {
+  .button {
     font-size: 1.6rem;
     display: flex;
     align-items: center;
@@ -19,32 +19,35 @@ const styles = css`
       background-color: rgba(0, 0, 0, 0.5);
     }
 
-    &.button {
-      &-bordered {
-        /* rol normal */
+    &.rol-primary {
+      color: var(--reader-text-color-primary);
+    }
 
-        &.variant-primary {
-        }
+    &.rol-secondary {
+      color: var(--reader-text-color-secondary);
+    }
 
-        &.variant-secundary {
-        }
+    &.rol-tertiary {
+      color: var(--reader-text-color-tertiary);
+    }
 
-        &.variant-tertiary {
-        }
-      }
+    &.full-width {
+      width: 100%;
+    }
 
-      &-active {
-        /* rol normal */
+    &.align-left {
+      text-align: left;
+      justify-content: flex-start;
+    }
 
-        &.variant-primary {
-        }
+    &.align-center {
+      text-align: center;
+      justify-content: center;
+    }
 
-        &.variant-secundary {
-        }
-
-        &.variant-tertiary {
-        }
-      }
+    &.align-right {
+      text-align: right;
+      justify-content: flex-end;
     }
   }
 `;

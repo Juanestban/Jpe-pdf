@@ -9,7 +9,7 @@ import styles from './styles';
 type TitlePropsPrimary = HTMLProps<HTMLHeadingElement> & BaseTextProps;
 
 interface TitleProps extends TitlePropsPrimary {
-  Component: 'h1' | 'h2' | 'h3' | 'h4';
+  Component?: 'h1' | 'h2' | 'h3' | 'h4';
 }
 
 const fontSizeTypes: { [key in FontSize]: FontSize } = {

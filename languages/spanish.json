@@ -1,0 +1,22 @@
+{
+  "LangState": "Español",
+  "navbar": {
+    "title": "Jep-Reader",
+    "search": {
+      "placeholder": "Buscar",
+      "tooltip": "Buscar"
+    },
+    "home": "Inicio",
+    "lang": "Idioma"
+  },
+  "page": [
+    {
+      "path": "/",
+      "document": {
+        "head": {},
+        "body": {},
+        "footer": {}
+      }
+    }
+  ]
+}
