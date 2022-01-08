@@ -2,7 +2,7 @@ import { FC, forwardRef, HTMLProps } from 'react';
 import cs from 'classnames';
 import css from './styles';
 
-export type FontSize =
+type FontSize =
   | 'extra-large'
   | 'semi-large'
   | 'large'
@@ -11,7 +11,7 @@ export type FontSize =
   | 'semi-small'
   | 'small';
 
-export type BaseTextProps = {
+type BaseTextProps = {
   fontSize?: FontSize;
   color?: 'primary' | 'secondary' | 'tertiary' | 'label';
 };
@@ -23,12 +23,12 @@ type TypographyPrimaryProps = HTMLProps<
 
 type TypographyComponent = 'p' | 'span';
 
-export interface TypographyProps extends TypographyPrimaryProps {
+interface TypographyProps extends TypographyPrimaryProps {
   variant?: 'label' | 'border' | 'wherever';
   component?: TypographyComponent;
 }
 
-export const Typography = forwardRef<
+const Typography = forwardRef<
   HTMLParagraphElement & HTMLSpanElement,
   TypographyProps
 >(function Typography(
@@ -53,4 +53,7 @@ export const Typography = forwardRef<
       <style jsx>{css}</style>
     </>
   );
-}) as FC<TypographyProps>;
+}) as unknown as FC<TypographyProps>;
+
+export default Typography;
+export type { BaseTextProps, TypographyProps, FontSize };

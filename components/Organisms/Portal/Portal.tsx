@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import Button from '@jpe-reader/components/Atoms/Button';
 import { Backdrop, ContainerPortal, ContainerPortalProps } from './styles';
 
-export const ID_PORTAL = 'portal-container';
+const ID_PORTAL = 'portal-container';
 
-export interface PortalProps {
+interface PortalProps {
   isVisible?: boolean;
   onClose?(): void;
   children: ReactNode;
   footer?: ReactNode;
 }
 
-export const Portal: FC<PortalProps & ContainerPortalProps> = ({
+const Portal: FC<PortalProps & ContainerPortalProps> = ({
   children,
   size,
   footer,
@@ -42,3 +42,7 @@ export const Portal: FC<PortalProps & ContainerPortalProps> = ({
       )
     : null;
 };
+
+export default Portal;
+export { ID_PORTAL };
+export type { PortalProps };

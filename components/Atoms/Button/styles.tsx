@@ -4,13 +4,15 @@ const styles = css`
   button {
     font-size: 1.6rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
     background-color: transparent;
     color: var(--reader-text-color-label);
     border: 0.2rem solid transparent;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    user-select: none;
     cursor: pointer;
 
     &:hover {

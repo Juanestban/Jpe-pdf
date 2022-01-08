@@ -1,7 +1,9 @@
 import { useTheme } from '@jpe-reader/hooks/useTheme';
-import { Link } from '@jpe-reader/components/Atoms/Link';
+import Link from '@jpe-reader/components/Atoms/Link';
 import Button from '../../Atoms/Button';
 import styles from './styles.module.css';
+import { LanguageSelection } from '../LanguageSelection';
+import Title from '@jpe-reader/components/Atoms/Title';
 
 export default function Navbar() {
   const { theme, handleTheme } = useTheme();
@@ -9,7 +11,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.containerTitle}>
-        <h1>JEP-Reader</h1>
+        <Title Component="h1">JEP-Reader</Title>
       </div>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
@@ -23,7 +25,7 @@ export default function Navbar() {
             />
           </li>
           <li>
-            <Button icon="IoLanguage" onClick={handleTheme} />
+            <LanguageSelection />
           </li>
         </ul>
       </nav>

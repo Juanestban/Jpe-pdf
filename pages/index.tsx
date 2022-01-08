@@ -2,8 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Button from '@jpe-reader/components/Atoms/Button';
 import styles from '../styles/Home.module.css';
-import { Portal } from '@jpe-reader/components/Organisms/Portal';
+import Portal from '@jpe-reader/components/Organisms/Portal';
 import { useToggle } from '@jpe-reader/hooks/useToggle';
+import Title from '@jpe-reader/components/Atoms/Title';
+import Typography from '@jpe-reader/components/Atoms/Typography';
 
 const Home: NextPage = () => {
   const { toggle, handleToggle } = useToggle();
@@ -16,8 +18,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Button onClick={handleToggle}>button</Button>
+      <Typography>Hello, i am a typography component</Typography>
       <Portal isVisible={toggle} onClose={handleToggle}>
-        <h3>holaaa</h3>
+        <Title Component="h3">holaaa</Title>
       </Portal>
     </div>
   );

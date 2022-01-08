@@ -1,7 +1,7 @@
 import { FC, forwardRef, HTMLAttributes } from 'react';
 import * as IconsImports from 'react-icons/io5';
 import classnames from 'classnames';
-import { Icon, SizeIcon } from '../Icon';
+import Icon, { SizeIcon } from '../Icon';
 import css from './styles';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {

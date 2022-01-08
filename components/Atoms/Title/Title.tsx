@@ -8,7 +8,7 @@ import styles from './styles';
 
 type TitlePropsPrimary = HTMLProps<HTMLHeadingElement> & BaseTextProps;
 
-export interface TitleProps extends TitlePropsPrimary {
+interface TitleProps extends TitlePropsPrimary {
   Component: 'h1' | 'h2' | 'h3' | 'h4';
 }
 
@@ -22,8 +22,15 @@ const fontSizeTypes: { [key in FontSize]: FontSize } = {
   small: 'small',
 };
 
-export const Title = forwardRef<HTMLHeadingElement, TitleProps>(function Title(
-  { Component = 'h2', color = 'label', fontSize, className, ...props },
+const Title = forwardRef<HTMLHeadingElement, TitleProps>(function Title(
+  {
+    Component = 'h2',
+    color = 'label',
+    fontSize,
+    className,
+    children,
+    ...props
+  },
   ref
 ) {
   const conditionalFonts =
@@ -43,9 +50,12 @@ export const Title = forwardRef<HTMLHeadingElement, TitleProps>(function Title(
   return (
     <>
       <Component ref={ref} className={classesTitle} {...props}>
-        Hola Mundo
+        {children}
       </Component>
       <style jsx>{styles}</style>
     </>
   );
-}) as FC<TitleProps>;
+}) as unknown as FC<TitleProps>;
+
+export default Title;
+export type { TitleProps };

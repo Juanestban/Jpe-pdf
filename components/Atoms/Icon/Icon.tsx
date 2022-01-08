@@ -2,15 +2,15 @@ import { forwardRef, FC, HTMLAttributes } from 'react';
 import * as ImportsIcons from 'react-icons/io5';
 import css from './styles';
 
-export type SizeIcon = number | 'small' | 'normal' | 'large' | 'extra-large';
+type SizeIcon = number | 'small' | 'normal' | 'large' | 'extra-large';
 
-export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
+interface IconProps extends HTMLAttributes<HTMLSpanElement> {
   icon: keyof typeof ImportsIcons;
   sizeIcon?: SizeIcon;
   color?: string;
 }
 
-export const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
+const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
   { icon, sizeIcon = 'normal', color, ...props },
   ref
 ) {
@@ -32,3 +32,6 @@ export const Icon = forwardRef<HTMLSpanElement, IconProps>(function Icon(
     </>
   );
 }) as unknown as FC<IconProps>;
+
+export default Icon;
+export type { SizeIcon, IconProps };
