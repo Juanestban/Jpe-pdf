@@ -5,14 +5,13 @@ import ThemeProvider from '@jpe-reader/contexts/ThemeContext';
 import Spinner from '@jpe-reader/components/Molecules/Spinner/Spinner';
 import Navbar from '@jpe-reader/components/Molecules/Navbar';
 import { OverlayProvider } from '@jpe-reader/contexts/OverlayContext';
-import Container from '@jpe-reader/components/Molecules/Container';
-import AuthProvider from '@jpe-reader/contexts/AuthContext';
+import WrapperJune from '@jpe-reader/components/Organisms/WrapperJune';
 
 import 'normalize.css';
 import '../styles/globals.css';
 import '@jpe-reader/styles/variables-globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp(AppProps: AppProps) {
   const [isRender, setIsRender] = useState<boolean>(false);
 
   useEffect(() => {
@@ -59,11 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="theme-color" content="#317EFB" />
         </Head>
         <Navbar />
-        <AuthProvider>
-          <Container>
-            <Component {...pageProps} />
-          </Container>
-        </AuthProvider>
+        <WrapperJune {...AppProps} />
       </OverlayProvider>
     </ThemeProvider>
   );

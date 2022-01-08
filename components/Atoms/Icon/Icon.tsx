@@ -1,5 +1,5 @@
 import { forwardRef, FC, HTMLAttributes } from 'react';
-import * as ImportsIcons from 'react-icons/bi';
+import * as ImportsIcons from 'react-icons/io5';
 import css from './styles';
 
 export type SizeIcon = number | 'small' | 'normal' | 'large' | 'extra-large';

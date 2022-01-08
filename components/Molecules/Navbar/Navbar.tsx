@@ -17,13 +17,13 @@ export default function Navbar() {
             <Link href="/">Inicio</Link>
           </li>
           <li>
-            <Link href="/social">social</Link>
-          </li>
-          <li>
             <Button
-              icon={theme === 'light' ? 'BiSun' : 'BiMoon'}
+              icon={theme === 'light' ? 'IoSunnyOutline' : 'IoMoonSharp'}
               onClick={handleTheme}
             />
+          </li>
+          <li>
+            <Button icon="IoLanguage" onClick={handleTheme} />
           </li>
         </ul>
       </nav>
