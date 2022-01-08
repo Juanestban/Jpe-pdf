@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-export default css`
+const styles = css`
   .container {
     max-width: 125rem;
     border: 0.1rem solid red;
@@ -8,3 +8,5 @@ export default css`
     margin-top: 5%;
   }
 `;
+
+export default styles;

@@ -1,7 +1,9 @@
 import css from 'styled-jsx/css';
 
-export default css`
+const styles = css`
   a {
     font-size: var(--font-size-normal);
   }
 `;
+
+export default styles;

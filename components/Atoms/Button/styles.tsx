@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-export default css`
+const styles = css`
   button {
     font-size: 1.6rem;
     display: flex;
@@ -46,3 +46,5 @@ export default css`
     }
   }
 `;
+
+export default styles;

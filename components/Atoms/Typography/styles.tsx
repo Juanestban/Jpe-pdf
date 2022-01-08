@@ -1,3 +1,5 @@
 import css from 'styled-jsx/css';
 
-export default css``;
+const styles = css``;
+
+export default styles;
