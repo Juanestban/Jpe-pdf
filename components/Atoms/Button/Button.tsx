@@ -30,12 +30,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     textAlign,
     colorIcon,
     isFullWidth,
+    variant = 'normal',
     ...rest
   } = props;
   const buttonClasses = classnames('button', className, {
     'full-width': isFullWidth,
     [`rol-${rest.rol}`]: rest.rol,
     [`align-${textAlign}`]: textAlign,
+    [`variant-${variant}`]: variant,
   });
 
   return (
