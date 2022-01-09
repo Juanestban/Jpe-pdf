@@ -1,7 +1,7 @@
 import Link from '@jpe-reader/components/Atoms/Link';
 import Button from '../../Atoms/Button';
 import Title from '@jpe-reader/components/Atoms/Title';
-import { LanguageSelection } from '../LanguageSelection';
+import LanguageSelection from '../LanguageSelection';
 import { useTheme } from '@jpe-reader/hooks/useTheme';
 import { useDictionary } from '@jpe-reader/hooks/useLanguage';
 import styles from './styles.module.css';
