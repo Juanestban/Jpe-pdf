@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.containerTitle}>
-        <Title Component="h1">JEP-Reader</Title>
+        <Title Component="h1">{navbar.title}</Title>
       </div>
       <nav className={styles.nav}>
         <ul className={styles.ul}>

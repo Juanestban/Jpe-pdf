@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import {
   LanguageContext,
   LanguagesTypes,
@@ -15,9 +16,7 @@ export const useLanguageDispatchAll = (): (() => void)[] => {
     LanguagesTypes.spanish,
   ];
 
-  return typesArr.map((type) => () => {
-    dispatch({ type });
-  });
+  return typesArr.map((type) => () => dispatch({ type }));
 };
 
 export const useLanguageDispatch = (lang: keyof typeof LanguagesTypes) => {
@@ -41,19 +40,23 @@ export const useEngish = (): (() => void) => {
 export const useDictionary = (): {
   LangState: string;
   navbar: typeof sp.navbar | typeof en.navbar;
-  page: typeof sp.page | typeof en.page;
+  page: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  { path: string; document: { head: any; body: any; footer: any } } | undefined;
 } => {
   const { lang } = useContext(LanguageContext);
+  const { pathname } = useRouter();
   const languages = [en, sp];
 
   const dictionary = languages.find((curr) => curr.LangState === lang);
-  // const { navbar, page } = dictionary;
 
   if (dictionary === undefined) {
     const dictionary = languages[0];
+    const page = dictionary.page.find((page) => page.path === pathname);
 
-    return { ...dictionary };
+    return { ...dictionary, page };
   }
 
-  return { ...dictionary };
+  const page = dictionary.page.find((page) => page.path === pathname);
+
+  return { ...dictionary, page };
 };
