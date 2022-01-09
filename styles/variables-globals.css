@@ -7,11 +7,15 @@
   --reader-fill-primary: #fff;
   --reader-fill-secundary: #ddd;
   --reader-fill-tertiary: var(--lt-color-gray-100);
-
-  --reader-other-tertiary: #ccc;
+  --reader-fill-quaternary: #fff;
+  --reader-fill-button-color: #f2f2f2;
 
   --backdrop-color: rgba(0, 0, 0, 0.3);
   --backdrop-bg-color: #fff;
+
+  --reader-border-color-primary: #1c62b9;
+
+  --reader-white-color: #fff;
 }
 
 .jep-reader-theme-dark {
@@ -23,9 +27,15 @@
   --reader-fill-primary: #222224;
   --reader-fill-secundary: #3a3a3d;
   --reader-fill-tertiary: var(--lt-color-gray-900);
+  --reader-fill-quaternary: #0e0e0f;
+  --reader-fill-button-color: #3a3a3d;
 
   --reader-other-tertiary: #f1ede7;
 
   --backdrop-color: rgba(1, 1, 1, 0.3);
   --backdrop-bg-color: #222224;
+
+  --reader-border-color-primary: #1c62b9;
+
+  --reader-white-color: #fff;
 }
