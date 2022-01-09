@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Spinner from '@jpe-reader/components/Molecules/Spinner/Spinner';
-import Navbar from '@jpe-reader/components/Molecules/Navbar';
+import Navbar from '@jpe-reader/components/Organisms/Navbar';
 import WrapperApp from '@jpe-reader/components/Organisms/WrapperApp';
 import WrapperJune from '@jpe-reader/components/Organisms/WrapperJune';
 
