@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '@jpe-reader/components/Atoms/Button';
 import Icon from '@jpe-reader/components/Atoms/Icon';
@@ -8,7 +8,7 @@ import {
   useLanguageDispatchAll,
 } from '@jpe-reader/hooks/useLanguage';
 
-export const LanguageSelection: FC = () => {
+export default function LanguageSelection() {
   const [hidden, setHidden] = useState<boolean>(true);
   const { lang, langEnables } = useLanguage();
   const dispatchs = useLanguageDispatchAll();
@@ -50,4 +50,4 @@ export const LanguageSelection: FC = () => {
       {css}
     </div>
   );
-};
+}

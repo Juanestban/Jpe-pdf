@@ -13,7 +13,29 @@
     {
       "path": "/",
       "document": {
-        "head": {},
+        "head": {
+          "title": "June - Inicio"
+        },
+        "body": {},
+        "footer": {}
+      }
+    },
+    {
+      "path": "/granada",
+      "document": {
+        "head": {
+          "title": "granada"
+        },
+        "body": {},
+        "footer": {}
+      }
+    },
+    {
+      "path": "/granada/[idGranada]",
+      "document": {
+        "head": {
+          "title": "granada/id"
+        },
         "body": {},
         "footer": {}
       }

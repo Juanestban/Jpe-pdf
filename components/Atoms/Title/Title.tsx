@@ -1,4 +1,4 @@
-import { FC, HTMLProps, forwardRef } from 'react';
+import { FC, DetailedHTMLProps, HTMLAttributes, forwardRef } from 'react';
 import cs from 'classnames';
 import {
   BaseTextProps,
@@ -6,7 +6,11 @@ import {
 } from '@jpe-reader/components/Atoms/Typography';
 import styles from './styles';
 
-type TitlePropsPrimary = HTMLProps<HTMLHeadingElement> & BaseTextProps;
+type TitlePropsPrimary = DetailedHTMLProps<
+  HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+> &
+  BaseTextProps;
 
 interface TitleProps extends TitlePropsPrimary {
   Component?: 'h1' | 'h2' | 'h3' | 'h4';

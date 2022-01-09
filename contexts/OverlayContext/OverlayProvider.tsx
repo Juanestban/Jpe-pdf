@@ -18,5 +18,6 @@ function OverlayProvider({ children }: OverlayProviderProps) {
   );
 }
 
-export { OverlayContext, OverlayProvider };
+export { OverlayContext };
+export default OverlayProvider;
 export type { OverlayContextVals, OverlayProviderProps };

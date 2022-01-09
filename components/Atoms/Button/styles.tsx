@@ -16,7 +16,7 @@ const styles = css`
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: var(--backdrop-color);
     }
 
     &.rol-primary {
@@ -29,6 +29,19 @@ const styles = css`
 
     &.rol-tertiary {
       color: var(--reader-text-color-tertiary);
+    }
+
+    &.variant-primary {
+    }
+
+    &.variant-secondary {
+    }
+
+    &.variant-tertiary {
+    }
+
+    &.variant-normal {
+      /* background-color: transparent; */
     }
 
     &.full-width {
