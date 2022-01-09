@@ -1,4 +1,4 @@
-import { FC, forwardRef, HTMLProps } from 'react';
+import { FC, DetailedHTMLProps, HTMLAttributes, forwardRef } from 'react';
 import cs from 'classnames';
 import css from './styles';
 
@@ -16,7 +16,8 @@ type BaseTextProps = {
   color?: 'primary' | 'secondary' | 'tertiary' | 'label';
 };
 
-type TypographyPrimaryProps = HTMLProps<
+type TypographyPrimaryProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLParagraphElement & HTMLSpanElement>,
   HTMLParagraphElement & HTMLSpanElement
 > &
   BaseTextProps;

@@ -1,10 +1,11 @@
-import { forwardRef, FC, HTMLAttributes } from 'react';
+import { forwardRef, FC, DetailedHTMLProps, HTMLAttributes } from 'react';
 import * as ImportsIcons from 'react-icons/io5';
 import css from './styles';
 
 type SizeIcon = number | 'small' | 'normal' | 'large' | 'extra-large';
 
-interface IconProps extends HTMLAttributes<HTMLSpanElement> {
+interface IconProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
   icon: keyof typeof ImportsIcons;
   sizeIcon?: SizeIcon;
   color?: string;

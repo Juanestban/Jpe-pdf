@@ -1,10 +1,14 @@
-import { FC, forwardRef, HTMLAttributes } from 'react';
+import { FC, forwardRef, DetailedHTMLProps, ButtonHTMLAttributes } from 'react';
 import * as IconsImports from 'react-icons/io5';
 import classnames from 'classnames';
 import Icon, { SizeIcon } from '../Icon';
 import css from './styles';
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   variant?: 'normal' | 'bordered' | 'active';
   rol?: 'normal' | 'primary' | 'secondary' | 'tertiary';
   isFullWidth?: boolean;
