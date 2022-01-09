@@ -1,48 +1,55 @@
 import css from 'styled-jsx/css';
 
-export default css`
-  button {
+const styles = css`
+  .button {
     font-size: 1.6rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
     background-color: transparent;
     color: var(--reader-text-color-label);
     border: 0.2rem solid transparent;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    user-select: none;
     cursor: pointer;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.5);
     }
 
-    &.button {
-      &-bordered {
-        /* rol normal */
+    &.rol-primary {
+      color: var(--reader-text-color-primary);
+    }
 
-        &.variant-primary {
-        }
+    &.rol-secondary {
+      color: var(--reader-text-color-secondary);
+    }
 
-        &.variant-secundary {
-        }
+    &.rol-tertiary {
+      color: var(--reader-text-color-tertiary);
+    }
 
-        &.variant-tertiary {
-        }
-      }
+    &.full-width {
+      width: 100%;
+    }
 
-      &-active {
-        /* rol normal */
+    &.align-left {
+      text-align: left;
+      justify-content: flex-start;
+    }
 
-        &.variant-primary {
-        }
+    &.align-center {
+      text-align: center;
+      justify-content: center;
+    }
 
-        &.variant-secundary {
-        }
-
-        &.variant-tertiary {
-        }
-      }
+    &.align-right {
+      text-align: right;
+      justify-content: flex-end;
     }
   }
 `;
+
+export default styles;

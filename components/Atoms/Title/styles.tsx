@@ -1,8 +1,16 @@
 import css from 'styled-jsx/css';
 
 const styles = css`
-  a {
-    font-size: var(--font-size-normal);
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
+
+  h4 {
   }
 `;
 

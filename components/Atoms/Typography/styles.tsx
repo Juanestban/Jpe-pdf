@@ -1,3 +1,11 @@
 import css from 'styled-jsx/css';
 
-export default css``;
+const styles = css`
+  p {
+  }
+
+  span {
+  }
+`;
+
+export default styles;

@@ -20,7 +20,9 @@
       "@jpe-reader/config/*": ["config/*"],
       "@jpe-reader/contexts/*": ["contexts/*"],
       "@jpe-reader/hooks/*": ["hooks/*"],
-      "@jpe-reader/styles/*": ["styles/*"]
+      "@jpe-reader/styles/*": ["styles/*"],
+      "@jpe-reader/languages/*": ["languages/*"],
+      "@jpe-reader/utils/*": ["utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,27 +1,42 @@
 import { FC, forwardRef, HTMLAttributes } from 'react';
-import * as IconsImports from 'react-icons/bi';
+import * as IconsImports from 'react-icons/io5';
 import classnames from 'classnames';
-import { Icon, SizeIcon } from '../Icon';
+import Icon, { SizeIcon } from '../Icon';
 import css from './styles';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   variant?: 'normal' | 'bordered' | 'active';
-  rol?: 'normal' | 'primary' | 'secundary' | 'tertiary';
-  ifFullWidth?: boolean;
+  rol?: 'normal' | 'primary' | 'secondary' | 'tertiary';
+  isFullWidth?: boolean;
+  textAlign?: 'left' | 'center' | 'right';
   icon?: keyof typeof IconsImports;
   size?: SizeIcon;
   colorIcon?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { children, className, icon, size = 16, colorIcon, ...props },
+  props,
   ref
 ) {
-  const buttonClasses = classnames('button', className);
+  const {
+    icon,
+    children,
+    className,
+    size = 16,
+    textAlign,
+    colorIcon,
+    isFullWidth,
+    ...rest
+  } = props;
+  const buttonClasses = classnames('button', className, {
+    'full-width': isFullWidth,
+    [`rol-${rest.rol}`]: rest.rol,
+    [`align-${textAlign}`]: textAlign,
+  });
 
   return (
     <>
-      <button ref={ref} className={buttonClasses} {...props}>
+      <button ref={ref} className={buttonClasses} {...rest}>
         {icon && (
           <Icon
             icon={icon}
