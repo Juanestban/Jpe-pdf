@@ -40,8 +40,16 @@ export const useEngish = (): (() => void) => {
 export const useDictionary = (): {
   LangState: string;
   navbar: typeof sp.navbar | typeof en.navbar;
-  page: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  { path: string; document: { head: any; body: any; footer: any } } | undefined;
+  page:
+    | {
+        path: string;
+        document: {
+          head: { title: string; [key: string]: any };
+          body: any;
+          footer: any;
+        };
+      }
+    | undefined;
 } => {
   const { lang } = useContext(LanguageContext);
   const { pathname } = useRouter();
@@ -49,7 +57,7 @@ export const useDictionary = (): {
 
   const dictionary = languages.find((curr) => curr.LangState === lang);
 
-  if (dictionary === undefined) {
+  if (!dictionary) {
     const dictionary = languages[0];
     const page = dictionary.page.find((page) => page.path === pathname);
 
