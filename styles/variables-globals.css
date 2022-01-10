@@ -16,6 +16,7 @@
   --reader-border-color-primary: #1c62b9;
 
   --reader-white-color: #fff;
+  --reader-black-color: #000;
 }
 
 .jep-reader-theme-dark {
@@ -38,4 +39,5 @@
   --reader-border-color-primary: #1c62b9;
 
   --reader-white-color: #fff;
+  --reader-black-color: #000;
 }
