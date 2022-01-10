@@ -22,6 +22,7 @@ export const { className, styles } = css.resolve`
   ul {
     width: 100%;
     position: absolute;
+    opacity: 0;
     top: 40px;
     background-color: var(--reader-fill-secundary);
     border-radius: 5px;

@@ -6,6 +6,8 @@
   border-bottom: 0.1rem solid var(--reader-fill-secundary);
   position: sticky;
   top: 0;
+
+  z-index: 1;
 }
 
 .containerTitle {
@@ -27,4 +29,8 @@
 .ul li {
   margin: 0 1rem;
   list-style: none;
+}
+
+.ul li:nth-child(1) {
+  width: 50px;
 }

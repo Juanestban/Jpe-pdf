@@ -19,18 +19,17 @@ interface OverlayProviderProps {
 
 function OverlayProvider({ children }: OverlayProviderProps) {
   const [isOverlay, setIsOverlay] = useState(false);
+  const classesPortal = cs({ portal: isOverlay });
   const classesOverlay = cs('overlay overlay-backdrop', {
-    'overlay-transparent': isOverlay,
+    // 'overlay-transparent': isOverlay,
   });
-
-  console.log(isOverlay);
 
   const handleIsOverlay = () => setIsOverlay(!isOverlay);
 
   return (
     <OverlayContext.Provider value={{ isOverlay, handleIsOverlay }}>
       {children}
-      <div className="portal">
+      <div className={classesPortal}>
         <div id={ID_PORTAL} />
         {isOverlay && (
           <div className={classesOverlay} onClick={handleIsOverlay} />

@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@jpe-reader/components/Atoms/Button';
-import { Backdrop, ContainerPortal, ContainerPortalProps } from './styles';
+import { ContainerPortal, ContainerPortalProps } from './styles';
 import { ID_PORTAL } from '@jpe-reader/contexts/OverlayContext';
 
 interface PortalProps {
@@ -28,20 +28,17 @@ const Portal: FC<PortalProps & ContainerPortalProps> = ({
 
   return isRender && isVisible
     ? ReactDOM.createPortal(
-        <Backdrop>
-          <ContainerPortal size={size}>
-            <header className="header-portal">
-              <Button icon="IoCloseCircleOutline" onClick={onClose} />
-            </header>
-            {children}
-            <footer className="footer-portal">{footer}</footer>
-          </ContainerPortal>
-        </Backdrop>,
+        <ContainerPortal size={size}>
+          <header className="header-portal">
+            <Button icon="IoCloseCircleOutline" onClick={onClose} />
+          </header>
+          {children}
+          <footer className="footer-portal">{footer}</footer>
+        </ContainerPortal>,
         document.getElementById(ID_PORTAL)!
       )
     : null;
 };
 
 export default Portal;
-export { ID_PORTAL };
 export type { PortalProps };
