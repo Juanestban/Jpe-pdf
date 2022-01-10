@@ -1,6 +1,6 @@
 # Issue Linked to close
 
-close #issueNumber.
+close #issueNumber (number from issue to close)
 
 ## Information
 
