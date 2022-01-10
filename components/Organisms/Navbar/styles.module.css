@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  border-bottom: 0.1rem solid var(--reader-fill-secundary);
+  border-bottom: 0.1rem solid var(--reader-fill-secondary);
   position: sticky;
   top: 0;
 
@@ -26,11 +26,17 @@
   padding: 0;
 }
 
-.ul li {
+.li {
   margin: 0 1rem;
   list-style: none;
 }
 
-.ul li:nth-child(1) {
+.li:nth-child(1) {
   width: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .ul {
+    display: none;
+  }
 }

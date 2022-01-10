@@ -24,7 +24,7 @@ export const { className, styles } = css.resolve`
     position: absolute;
     opacity: 0;
     top: 40px;
-    background-color: var(--reader-fill-secundary);
+    background-color: var(--reader-fill-secondary);
     border-radius: 5px;
     padding: 5px 10px;
     overflow: hidden;
@@ -32,6 +32,7 @@ export const { className, styles } = css.resolve`
 
     li {
       margin: 0;
+      width: auto;
     }
   }
 `;

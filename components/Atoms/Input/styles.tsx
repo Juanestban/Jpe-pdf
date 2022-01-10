@@ -12,7 +12,7 @@ const styles = css`
     color: var(--text-color);
     outline: none;
     font-size: var(--font-size-normal);
-    border: 1px solid var(--reader-fill-secundary);
+    border: 1px solid var(--reader-fill-secondary);
     background-color: var(--reader-fill-quaternary);
 
     &:focus {
