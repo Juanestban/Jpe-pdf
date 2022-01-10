@@ -6,6 +6,10 @@
   --font-size-large: 2rem;
   --font-size-semi-large: 2.2rem;
   --font-size-extra-large: 2.4rem;
+
+  --box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
+
+  --button-max-width: 300px;
 }
 
 *,
@@ -102,4 +106,25 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
+
+.overlay-backdrop {
+  display: flex;
+  justify-content: center;
+  padding-top: 12vh;
+  background-color: var(--backdrop-color);
+}
+
+.overlay-transparent {
+  background-color: transparent;
 }

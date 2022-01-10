@@ -1,4 +1,4 @@
-export { default, OverlayContext } from './OverlayProvider';
+export { default, OverlayContext, ID_PORTAL } from './OverlayProvider';
 export type {
   OverlayContextVals,
   OverlayProviderProps,

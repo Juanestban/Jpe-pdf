@@ -2,8 +2,7 @@ import { FC, ReactNode, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Button from '@jpe-reader/components/Atoms/Button';
 import { Backdrop, ContainerPortal, ContainerPortalProps } from './styles';
-
-const ID_PORTAL = 'portal-container';
+import { ID_PORTAL } from '@jpe-reader/contexts/OverlayContext';
 
 interface PortalProps {
   isVisible?: boolean;

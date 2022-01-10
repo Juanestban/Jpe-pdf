@@ -1,23 +1,45 @@
-import { createContext, ReactNode } from 'react';
-import { ID_PORTAL } from '@jpe-reader/components/Organisms/Portal';
+import { createContext, ReactNode, useState } from 'react';
+import cs from 'classnames';
 
-type OverlayContextVals = {};
+const ID_PORTAL = 'portal-container';
 
-const OverlayContext = createContext<OverlayContextVals>({});
+type OverlayContextVals = {
+  isOverlay: boolean;
+  handleIsOverlay(): void;
+};
+
+const OverlayContext = createContext<OverlayContextVals>({
+  isOverlay: false,
+  handleIsOverlay: () => {},
+});
 
 interface OverlayProviderProps {
   children?: ReactNode;
 }
 
 function OverlayProvider({ children }: OverlayProviderProps) {
+  const [isOverlay, setIsOverlay] = useState(false);
+  const classesOverlay = cs('overlay overlay-backdrop', {
+    'overlay-transparent': isOverlay,
+  });
+
+  console.log(isOverlay);
+
+  const handleIsOverlay = () => setIsOverlay(!isOverlay);
+
   return (
-    <OverlayContext.Provider value={{}}>
+    <OverlayContext.Provider value={{ isOverlay, handleIsOverlay }}>
       {children}
-      <div id={ID_PORTAL} />
+      <div className="portal">
+        <div id={ID_PORTAL} />
+        {isOverlay && (
+          <div className={classesOverlay} onClick={handleIsOverlay} />
+        )}
+      </div>
     </OverlayContext.Provider>
   );
 }
 
-export { OverlayContext };
+export { OverlayContext, ID_PORTAL };
 export default OverlayProvider;
 export type { OverlayContextVals, OverlayProviderProps };

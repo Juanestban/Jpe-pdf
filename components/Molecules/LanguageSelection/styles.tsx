@@ -5,6 +5,7 @@ export const variant: FramerMotionVariant = {
   closed: {
     opacity: 0,
     height: 0,
+    padding: 0,
   },
   open: {
     opacity: 1,
