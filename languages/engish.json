@@ -7,6 +7,7 @@
       "tooltip": "Search"
     },
     "home": "Home",
+    "theme_button": "Button Theme",
     "lang": "Language"
   },
   "page": [
@@ -16,7 +17,10 @@
         "head": {
           "title": "June - Home"
         },
-        "body": {},
+        "body": {
+          "title_portal_test": "Hello I'm a content from Portal",
+          "button_text_test": "Open the portal"
+        },
         "footer": {}
       }
     },

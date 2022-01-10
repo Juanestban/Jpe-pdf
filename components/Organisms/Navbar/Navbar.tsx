@@ -19,11 +19,12 @@ export default function Navbar() {
       <SearchBar />
       <nav className={styles.nav}>
         <ul className={styles.ul}>
-          <li>
+          <li className={styles.li}>
             <Link href="/">{navbar.home}</Link>
           </li>
           <li>
             <Button
+              about={navbar.theme_button}
               icon={theme === 'light' ? 'IoSunnyOutline' : 'IoMoonSharp'}
               onClick={handleTheme}
             />

@@ -7,6 +7,7 @@
       "tooltip": "Buscar"
     },
     "home": "Inicio",
+    "theme_button": "Boton del Tema",
     "lang": "Idioma"
   },
   "page": [
@@ -16,7 +17,10 @@
         "head": {
           "title": "June - Inicio"
         },
-        "body": {},
+        "body": {
+          "title_portal_test": "Hola, soy el contenido de un Portal",
+          "button_text_test": "Abrir el portal"
+        },
         "footer": {}
       }
     },

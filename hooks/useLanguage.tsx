@@ -44,7 +44,7 @@ export const useDictionary = (): {
     | {
         path: string;
         document: {
-          head: { title: string; [key: string]: any };
+          head: any;
           body: any;
           footer: any;
         };

@@ -19,7 +19,7 @@ export const stylesButton: CSSProperties = {
   borderRadius: 0,
   backgroundColor: 'var(--reader-fill-button-color)',
   padding: '.5rem 1.8rem',
-  border: '1px solid var(--reader-fill-secundary)',
+  border: '1px solid var(--reader-fill-secondary)',
   borderLeftColor: 'transparent',
 };
 

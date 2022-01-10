@@ -1,11 +1,11 @@
 .jep-reader-theme-light {
   --reader-text-color-label: #222224;
   --reader-text-color-primary: #ec255a;
-  --reader-text-color-secundary: blue;
+  --reader-text-color-secondary: blue;
   --reader-text-color-tertiary: blue;
 
   --reader-fill-primary: #fff;
-  --reader-fill-secundary: #ddd;
+  --reader-fill-secondary: #ddd;
   --reader-fill-tertiary: var(--lt-color-gray-100);
   --reader-fill-quaternary: #fff;
   --reader-fill-button-color: #f2f2f2;
@@ -21,11 +21,11 @@
 .jep-reader-theme-dark {
   --reader-text-color-label: #fff;
   --reader-text-color-primary: #ec255a;
-  --reader-text-color-secundary: tomato;
+  --reader-text-color-secondary: tomato;
   --reader-text-color-tertiary: tomato;
 
   --reader-fill-primary: #222224;
-  --reader-fill-secundary: #3a3a3d;
+  --reader-fill-secondary: #3a3a3d;
   --reader-fill-tertiary: var(--lt-color-gray-900);
   --reader-fill-quaternary: #0e0e0f;
   --reader-fill-button-color: #3a3a3d;
