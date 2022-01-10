@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Button from '@jpe-reader/components/Atoms/Button';
-import styles from '../styles/Home.module.css';
 import Portal from '@jpe-reader/components/Organisms/Portal';
-import { useOverlay } from '@jpe-reader/hooks/useOverlay';
 import Title from '@jpe-reader/components/Atoms/Title';
-import Typography from '@jpe-reader/components/Atoms/Typography';
+import FolderList from '@jpe-reader/components/Molecules/FolderList';
+import { useOverlay } from '@jpe-reader/hooks/useOverlay';
 import { useDictionary } from '@jpe-reader/hooks/useLanguage';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   const { isOverlay, handleIsOverlay } = useOverlay();
@@ -13,10 +13,12 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <Typography>Hello, i am a typography component</Typography>
-      <Button onClick={handleIsOverlay}>
-        {page?.document.body.button_text_test}
-      </Button>
+      <FolderList />
+      <div style={{ width: '20%' }}>
+        <Button onClick={handleIsOverlay}>
+          {page?.document.body.button_text_test}
+        </Button>
+      </div>
       <Portal isVisible={isOverlay} onClose={handleIsOverlay}>
         <Title Component="h3">{page?.document.body.title_portal_test}</Title>
       </Portal>
