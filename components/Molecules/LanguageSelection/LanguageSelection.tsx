@@ -4,6 +4,7 @@ import Button from '@jpe-reader/components/Atoms/Button';
 import Icon from '@jpe-reader/components/Atoms/Icon';
 import { styles as css, className, variant } from './styles';
 import {
+  useDictionary,
   useLanguage,
   useLanguageDispatchAll,
 } from '@jpe-reader/hooks/useLanguage';
@@ -12,6 +13,7 @@ export default function LanguageSelection() {
   const [hidden, setHidden] = useState<boolean>(true);
   const { lang, langEnables } = useLanguage();
   const dispatchs = useLanguageDispatchAll();
+  const { navbar } = useDictionary();
 
   const handleHidden = () => setHidden(!hidden);
 
@@ -24,7 +26,12 @@ export default function LanguageSelection() {
 
   return (
     <div className={className}>
-      <Button icon="IoLanguage" onClick={handleHidden} isFullWidth>
+      <Button
+        about={navbar.lang}
+        icon="IoLanguage"
+        onClick={handleHidden}
+        isFullWidth
+      >
         {lang}
         <Icon icon="IoCaretDownOutline" style={{ marginLeft: 5 }} />
       </Button>

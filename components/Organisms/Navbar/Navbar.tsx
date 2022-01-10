@@ -24,6 +24,7 @@ export default function Navbar() {
           </li>
           <li>
             <Button
+              about={navbar.theme_button}
               icon={theme === 'light' ? 'IoSunnyOutline' : 'IoMoonSharp'}
               onClick={handleTheme}
             />
