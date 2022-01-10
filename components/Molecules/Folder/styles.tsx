@@ -7,6 +7,7 @@ const styles = css`
       user-select: none;
       border-radius: 5px;
       position: relative;
+      overflow: hidden;
 
       &.bordered {
         border: 0.1rem solid var(--reader-fill-secondary);
