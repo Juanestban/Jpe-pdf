@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { Button as ButtonNextUI } from '@nextui-org/react';
 import Button from '@jpe-reader/components/Atoms/Button';
 import Portal from '@jpe-reader/components/Organisms/Portal';
 import Title from '@jpe-reader/components/Atoms/Title';
@@ -21,6 +22,9 @@ const Home: NextPage = () => {
       </div>
       <Portal isVisible={isOverlay} onClose={handleIsOverlay}>
         <Title Component="h3">{page?.document.body.title_portal_test}</Title>
+        <ButtonNextUI bordered color="primary">
+          button next-ui test
+        </ButtonNextUI>
       </Portal>
     </div>
   );

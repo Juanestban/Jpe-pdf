@@ -1,37 +1,48 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useReducer, Dispatch } from 'react';
+import { FolderProps } from '@jpe-reader/components/Molecules/Folder';
+import { folderAndFilesReducer } from './FolderAndFilesReducer';
+
+export enum FolderFilesTypes {
+  'ADD_FOLDER',
+  'REMOVE_FOLDER',
+  'UPDATE_FOLDER',
+  'ADD_FILE',
+  'REMOVE_FILE',
+  'UPDATE_FILE',
+}
+
+export type FolderFileState = {
+  folders: FolderProps[];
+  files: FolderProps[];
+};
+
+export type FolderFileAction = { type: FolderFilesTypes; payload: FolderProps };
 
 export interface FolderAndFilesContextVals {
-  folders: never[];
-  files: never[];
-  handleFilesAndFolders(): void;
+  folders: FolderProps[];
+  files: FolderProps[];
+  dispatch: Dispatch<FolderFileAction>;
 }
 
 export const FolderAndFilesContext = createContext<FolderAndFilesContextVals>({
   folders: [],
   files: [],
-  handleFilesAndFolders: () => {},
+  dispatch: () => {},
 });
 
 export interface FolderAndFilesProviderProps {
   children: ReactNode;
 }
 
+const initialValue = { folders: [], files: [] };
+
 export default function FolderAndFilesProvider({
   children,
 }: FolderAndFilesProviderProps) {
-  // use the hook useReducer for handle the files and folders
-  const [folders, setFolders] = useState([]);
-  const [files, setFiles] = useState([]);
-
-  const handleFilesAndFolders = () => {
-    setFiles([]);
-    setFolders([]);
-  };
+  const [state, dispatch] = useReducer(folderAndFilesReducer, initialValue);
 
   return (
-    <FolderAndFilesContext.Provider
-      value={{ folders, files, handleFilesAndFolders }}
-    >
+    <FolderAndFilesContext.Provider value={{ ...state, dispatch }}>
       {children}
     </FolderAndFilesContext.Provider>
   );
